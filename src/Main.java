@@ -1,6 +1,7 @@
 import RandomSelectedNumbers.RandomRangeNumber;
 import com.Problem.Names.Names1;
 import com.Problem.Names.Names2;
+import com.ProblemSolver.Operators.Operator;
 
 public class Main {
     public static ThreadLocal<String> local
@@ -14,13 +15,18 @@ public class Main {
         String name1 = Names1.getName();
         String name2 = Names2.getName();
 
+        String op = Operator.printOperator();
+
+        if (op.equals("+")) {
+
+        }
+
         if (num1 instanceof Integer) {
             System.out.println("Number 1: " + num1);
             System.out.println("Number 2: " + num2);
         }
 
-        if (name1 instanceof String name
-                && name != "") {
+        if (name1 instanceof String) {
 
             Thread thread = new Thread(() -> {
                 local.set(name1);
