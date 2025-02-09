@@ -14,18 +14,28 @@ public class Main {
         String name1 = Names1.getName();
         String name2 = Names2.getName();
 
-        Thread thread = new Thread(() -> {
-            local.set(name1);
-            GetNameMessage();
-        });
-        thread.start();
+        if (num1 instanceof Integer) {
+            System.out.println("Number 1: " + num1);
+            System.out.println("Number 2: " + num2);
+        }
 
-        Thread thread1 = new Thread(() -> {
-             local.set(name2);
-             GetNameTwoMessage();
-        });
+        if (name1 instanceof String name
+                && name != "") {
 
-        thread1.start();
+            Thread thread = new Thread(() -> {
+                local.set(name1);
+                GetNameMessage();
+            });
+            thread.start();
+
+            Thread thread1 = new Thread(() -> {
+                local.set(name2);
+                GetNameTwoMessage();
+            });
+
+            thread1.start();
+
+        }
 
 
     }
